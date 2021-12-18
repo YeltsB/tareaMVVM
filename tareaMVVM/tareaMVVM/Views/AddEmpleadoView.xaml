@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tareaMVVM.Views.AddEmpleadoView">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Agregar Empleado" Font="25" TextColor="Green" HorizontalOptions="Center"></Label>
+            <Entry x:Name="txtNombre" Placeholder="Nombres" Text="{Binding Nombre , Mode=TwoWay}"></Entry>
+            <Entry x:Name="txtApellido" Placeholder="Apellidos" Text="{Binding Apellido , Mode=TwoWay}"></Entry>
+            
+            <Entry x:Name="txtEdad" Placeholder="Edad" Text="{Binding Edad, Mode=TwoWay}" 
+                   Keyboard="Numeric"></Entry>
+            
+            <Entry x:Name="txtDireccion" Placeholder="Direccion" Text="{Binding Direccion , Mode=TwoWay}"></Entry>
+            <Entry x:Name="txtPuesto" Placeholder="Puesto" Text="{Binding Puesto , Mode=TwoWay}"></Entry>
+  
+
+            <Button x:Name="btnguardar" Text="Guardar" BackgroundColor="Purple" Command="{Binding Guardar}"></Button>
+
+            <Button x:Name="btnver" Text="Listado de Empleado" BackgroundColor="Red" Clicked="Btnver_Clicked"></Button>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

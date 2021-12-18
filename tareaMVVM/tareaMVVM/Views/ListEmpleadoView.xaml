@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tareaMVVM.Views.ListEmpleadoView">
+    <StackLayout>
+
+        <Label Text="Listado de Empleados" HorizontalOptions="Center" TextColor="Green"></Label>
+
+
+        <ListView ItemsSource="{Binding ListaEmpleados1}"  ItemSelected="ListView_ItemSelected" x:Name="lista">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="lbId_empleado" Text="{Binding Id_empleado}"></Label>
+                            <Label x:Name="lbNombre" Text="{Binding Nombre}"></Label>
+                            <Label x:Name="lbApellido" Text="{Binding Apellido}"></Label>
+                            <Label x:Name="lbPuesto" Text="{Binding Puesto}"></Label>
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button x:Name="btnEliminar" Text="Eliminar" BackgroundColor="Red" Clicked="btnEliminar_Clicked">
+
+        </Button>
+        <Button x:Name="btnModificar" Text="Modificar" BackgroundColor="Purple" Clicked="btnModificar_Clicked"></Button>
+
+    </StackLayout>
+</ContentPage>
